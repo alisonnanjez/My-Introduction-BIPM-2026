@@ -1,0 +1,168 @@
+/* ----------This styles the whole page---------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f9fa;
+  color: #202122;
+  line-height: 1.6; /* removes default edge margin */
+  margin: 0;
+}
+
+/* ---------- Banner (Tigoni dam) ---------- */
+.banner {
+  height: 40vh;
+  width: 100%;
+  background-image: url('Photos/tigoni-dam.jpg');
+  background-position: center;
+  background-size: cover;   /* fills the space without stretching */
+  background-repeat: no-repeat;    /* prevents the image from repeating or tiling across its container, forcing it to display only once */
+}
+
+/* ---------- Page container the main content ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;  /* centres the main content box*/
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #a2a9b1;
+  border-top: none;
+}
+
+/*---------- Wikipedia-style serif title with a line underneath ---------- */
+h1 {
+  font-family: "Linux Libertine", Georgia, Times, serif;  /* tells a web browser to display text using a prioritized fallback list of fonts, starting with "Linux Libertine" and ending with a generic serif style.*/
+  font-weight: normal;
+  font-size: 2em;
+  border-bottom: 1px solid #a2a9b1;
+  margin: 0 0 16px;
+}
+
+/* ---------- Accordion: a user interface component consisting of vertically stacked headers that a user can click to expand or collapse hidden content panels underneath, (details / summary), Thin line under each dropdown and vertical spacing ---------- */
+details {
+  border-bottom: 1px solid #a2a9b1;
+  padding: 8px 0;
+}
+
+/*---------- Makes the dropdown title larger, serif, clickable-looking ----------*/
+summary {
+  font-family: "Linux Libertine", Georgia, Times, serif;
+  font-size: 1.5em;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/*---------- hide the browser's default arrow -----------*/
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/*---------- Adds our own arrow (`▶`) before the title. before means insert something before this element -----------*/
+summary::before {
+  content: "▶";
+  font-size: 0.6em;
+  color: #54595d;
+  transition: transform 0.2s;
+}
+
+/*---------- When the box is open, rotate the arrow 90 degrees. [open] is how CSS detects an open dropdown -----------*/
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+/*---------- Title turns blue when the mouse is over it -----------*/
+summary:hover {
+  color: #0645ad;
+}
+
+/*---------- Padding inside the dropdown, overflow: auto makes the box wrap around floated images -----------*/
+.content {
+  padding: 8px 0 12px;
+  overflow: auto; 
+}
+
+/* ---------- The single side photo. float: left puts it beside the text; object-fit: cover crops instead of stretching ---------- */
+.thumb {
+  float: left;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid #202021;
+  padding: 3px;
+  background: #f8f9fa;
+  margin: 0 16px 8px 0;
+}
+
+/*---------- display: flex puts photos in a row, flex-wrap: wrap moves extras to the next line, gap is the space between them  -----------*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/*---------- Size (250x190px), border and padding for each gallery photo -----------*/
+.gallery img {
+  width: 250px;
+  height: 190px;
+  object-fit: cover;
+  border: 1px solid #202021;
+  padding: 3px;
+  background: #f8f9fa;
+}
+
+/*---------- Full-width table; border-collapse: collapse merges double borders into single lines -----------*/
+table.journey {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+/*---------- Border, padding, and left alignment for cells -----------*/
+table.journey th,
+table.journey td {
+  border: 1px solid #454648;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+/*---------- Light grey background on header cells -----------*/
+table.journey th {
+  background: #5297b3;
+}
+
+/* ---------- Styling my href links to look like buttons ---------- */
+.my-button-link {
+  display: inline-block;
+  background-color: #5297b3;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: "Linux Libertine", Georgia, Times, serif;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/*------------ Change the button background when the user hovers over it ------------*/
+.my-button-link:hover {
+  background-color: #137213;
+  color: white; /* Keeps text white */
+}
+
+
+
+/*---------- Rules that only apply on small screens. Here it lets the table scroll sideways on phones  -----------*/
+@media (max-width: 600px) {
+  table.journey { display: block; overflow-x: auto; }
+}
+
+/*---------- Size and border for the map iframe -----------*/
+.map {
+  width: 100%;
+  height: 450px;
+  border: 1px solid #c8ccd1;
+}
+
+

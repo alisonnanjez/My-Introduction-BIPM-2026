@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Introduction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="banner"></header>
+
+    <main>
+        <h1>About Me</h1>
+
+        <details open>                       <!-- a collapsible box; open is added so that when the page renders this sections appears expanded -->
+            <summary>Who is Alison?</summary>       <!-- the clickable title -->
+            <div class="content">               <!-- the hidden part that appears on click -->
+                <img class="thumb" src="Photos/smiling-at-giraffe-centre.jpeg" alt="Alison">. <!-- the thumb class is for the one single side photo while the gallery class aer for photos in a row.-->
+                <p>Raised in Limuru on the outskirts of Nairobi, surrounding nature inspired my love for long walks and the outdoors. Naturally curious, I bring that same enthusiasm to exploring new ideas, acquiring skills, and putting them into practice.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>My Work Experience</summary>
+            <div class="content">
+                <div class="gallery">
+                    <img src="Photos/kra-colleagues.jpg" alt="Alison at KRA">
+                    <img src="Photos/cws-colleagues-one.jpg" alt="Alison at CWS">
+                    <img src="Photos/cws-colleagues-two.jpg" alt="Alison at CWS">
+                </div>
+                
+                <table class="journey">
+                    <thead>
+                        <tr><th>Role</th><th>Organization</th><th>Period</th><th>Location</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Data Annotation & AI Evaluation Specialist</td><td>RWS Group & Mindrift</td><td>April 2024 - Present</td><td>Remote</td></tr>
+                        <tr><td>Social Worker(Case Processing)</td><td>Church World Service & Witness </td><td>April 2022 - March 2025</td><td>Nairobi, KE</td></tr>
+                        <tr><td>IT Intern</td><td>Kenya Revenue Authority</td><td>January 2022 - March 2022</td><td>Nairobi, KE</td></tr>
+                        <tr><td>IT Intern</td><td>Absa Bank PLC</td><td>February 2020 - May 2020</td><td>Nairobi, KE</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+        <details>
+            <summary>My Education</summary>
+            <div class="content">
+                 <table class="journey">
+                    <thead>        <!--this is the header row group-->
+                        <tr><th>Qualification</th><th>Institution</th><th>Period</th></tr>    <!--tr is the table row and th is the header cell-->
+                    </thead>
+                    <tbody>   <!--this contains the data rows, td is for normal cells, Each tr is one row, and each td is one box inside that row-->
+                        <tr><td>Msc Business Intelligence and Process Management</td><td>HWR Berlin</td><td>October 2026 - Present</td></tr>
+                        <tr><td>Google Data Analytics Professional Certificate</td><td>Coursera</td><td>June 2025</td></tr>
+                        <tr><td>Professional Data Analyst Certificate</td><td>DataCamp</td><td>September 2025</td></tr>
+                        <tr><td>Data Science Bootcamp</td><td>Tech4Dev</td><td>December 2021</td></tr>
+                        <tr><td>Bachelor of Business Information Technology</td><td>JKUAT</td><td>September 2017 - November 2021</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+        <details>
+            <summary>My Hobbies</summary>
+            <div class="content">
+                <div class="gallery">
+                    <img src="Photos/helmet.jpg" alt="E-bike Helmet">
+                    <img src="Photos/feeding-giraffe.jpeg" alt="Feeding a giraffe">
+                    <img src="Photos/orchestra.jpeg" alt="Orchestra">
+                    <img src="Photos/tree-planting.jpeg" alt="Tree planting">
+                    <img src="Photos/devfest.png" alt="Devfest">
+                    <img src="Photos/smiling-with-a-drink.jpeg" alt="Alison smiling">
+                    
+                </div>
+                <p>Beyond work, I love staying active and connected to nature whether cycling, volunteering on tree-planting projects with friends, or visiting wildlife spots like feeding giraffes. I enjoy good food and sweet treats like frozen yogurt, going bowling, and catching movies at the cinema with family. I am also passionate about music especially attending live orchestra performances and regularly stay plugged into the local tech community through events like GDG DevFest Nairobi</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Why study at HWR</summary>
+            <div class="content">
+                <p>HWR Berlin stands out to me for its strong integration of business and technology a powerful intersection where I thrive. I want to use this degree to design impactful tech-driven business strategies and advance research on scaling similar innovation opportunities in Kenya. On a personal note, moving to Berlin also brings me closer to my best friend, giving me a solid support system as I step into this new chapter.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Social Media Links</summary>
+            <div class="content">
+                <a class="my-button-link" href="www.linkedin.com/in/alison-wekesa" target="_blank" rel="noopener noreferrer">LinkedIn</a>. <!-- noopener noreferrer, keeps the other site from getting access to your page-->
+                <a class="my-button-link" href="https://github.com/alisonnanjez?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a>
+
+            </div>
+        </details>
+
+        <details>
+            <summary>My Work and Education Journey Map</summary>
+            <div class="content">
+                <iframe src="journey_map.html" title="Map of Alison's journey" class="map"></iframe>.    <!--An iframe is a HTML tag that lets you embed a completely separate webpage or external content inside your own current webpage. title describes it for accessibility.Since Python only runs in the terminal or notebooks,you have to run make_journey_map.py to make the website use the HTML file it creates.-->
+            </div>
+        </details>
+
+
+    
+    </main>
+
+</body>
+</html>
+
+
+<!-- I used semantic HTML which is the practice of using HTML tags that clearly describe the meaning and purpose of their content to both the browser and the developer, rather than just defining how the content looks-->
+
+
+<!-- 
+Detailed breakdown of the journey_map.html page
+
+It's a generated file that folium writes from your Python script, so if you want to change the map you edit `make_journey_map.py` and re-run it. If you edit `journey_map.html` by hand, your changes disappear the next time you run the script.
+
+It is a normal web page, but the logic inside it is JavaScript. Your script is basically a translator from Python to a page that uses a JavaScript map library called Leaflet. So can Python be linked to HTML? Python builds the page, and JavaScript runs it in the browser.
+
+The four parts of the file:
+
+| Part | What it does |
+|---|---|
+| `<head>` with `<script src=...>` and `<link ...>` | Loads outside libraries from the internet: Leaflet (the map engine), jQuery and Bootstrap (helpers), and icon fonts for the pin symbol. This is why the map needs an internet connection. |
+| `<style>` blocks | Make the map fill the whole space (`width: 100%; height: 100%`) and remove page margins, so it fits neatly inside your iframe. |
+| `<body>` | Holds one empty `<div>` with a long ID like `map_cd81...`. It's just a blank box where the map gets drawn. |
+| `<script>` at the bottom | The actual map, built step by step (see below). |
+
+What the script does, in order:
+
+1. `L.map(...)` creates the map inside that empty box, starting at the centre `[0, 0]` with zoom 1.
+2. `L.tileLayer("https://server.arcgisonline.com/.../{z}/{y}/{x}")` adds the background pictures. The map is made of small square images ("tiles"), and the browser fills in `{z}` (zoom level), `{x}` and `{y}` (which square) to request each one from Esri's server. Your `attr` text becomes the credit in the corner.
+3. `L.marker([-1.1058, 36.6425])`drops a pin at a place. This pattern repeats four times, once per stop, and the coordinates are in `[latitude, longitude]` order. Each marker also gets an **icon** (the blue pin), a **popup** (the text when clicked, like "Born and raised"), and a **tooltip** (the city name on hover).
+4. `L.polyline([[...], [...], ...])`** draws a line through a long list of coordinates. That list is what your `great_circle_points` function calculated, which is why the lines are curved. There are three polylines for your three legs: Limuru to Juja, Juja to Nairobi, and Nairobi to Berlin.
+5. `fitBounds(...)` zooms and moves the map so all four stops are visible. It overrides the starting zoom of 1 from step 1.
+
+The random names you'll see long names like `marker_9c1ce646...`. They're only labels folium makes up so the pieces don't clash, and they change every time you re-run the script, so don't worry about them.
+
+How the pieces connect each part of your Python becomes a part of the page.
+
+| In your Python script | In `journey_map.html` |
+|---|---|
+| `folium.Map(tiles=..., attr=...)` | `L.map` and `L.tileLayer` |
+| `folium.Marker(..., popup=..., tooltip=...)` | `L.marker`, `bindPopup`, `bindTooltip` |
+| `folium.PolyLine(arc, ...)` | `L.polyline([[lat, lon], ...])` |
+| `m.fit_bounds(...)` | `fitBounds(...)` |
+
+-->
