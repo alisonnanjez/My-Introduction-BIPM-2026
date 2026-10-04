@@ -3,7 +3,8 @@
 A personal "About Me" website with a kind of Wikipedia-style layout, collapsible
 sections, and an interactive map of my work and education journey.
 
-**Live site:** alisonnanjez.github.io/My-Introduction-BIPM-2026/
+**Live site:** https://alisonnanjez.github.io/My-Introduction-BIPM-2026/
+
 
 ## Features
 - Collapsible sections built with `<details>` and `<summary>`
